@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 650px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@layer components {
+  .nav-bar {
+    @apply z-30 fixed top-0 container h-20 mx-auto flex items-center justify-between;
+  }
+  .nav-div {
+    @apply lg:flex lg:gap-x-3 hidden;
+  }
+
+  .nav-item {
+    @apply text-white  text-2xl font-normal px-6  hover:lg:text-gray-900 hover:bg-gray-100 rounded-md;
+  }
+  .car-section {
+    @apply w-full h-screen object-cover relative;
+  }
+
+  .demo-detail {
+    @apply absolute top-[20%] left-1/2 translate-x-[-50%] translate-y-[-50%] text-center text-white;
+  }
+
+  .car-image {
+    @apply w-full h-screen object-cover top-0 brightness-90;
+  }
+
+  .car-detail {
+    @apply absolute top-[20%] left-1/2 translate-x-[-50%] translate-y-[-50%] text-center;
+  }
+
+  .btn-demo-drive {
+    @apply absolute bottom-28 left-1/2 translate-x-[-50%] translate-y-[-50%] text-white text-2xl block font-light py-3 border-2 rounded-lg w-11/12 sm:w-96 hover:brightness-50;
+  }
+
+  .btn-bottom-position {
+    @apply flex flex-col  justify-center  gap-6 absolute bottom-28 left-1/2 translate-x-[-50%] translate-y-[-50%] sm:flex-row;
+  }
+
+  .btn {
+    @apply flex flex-col justify-center h-16  items-center font-semibold text-2xl  bg-opacity-0 rounded-lg w-[90vw] sm:w-96 hover:brightness-50;
+  }
+  .btn-primary {
+    @apply bg-gray-100 text-black;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800 text-slate-200;
+  }
+  .accessories-section {
+    @apply w-full h-screen relative;
+  }
+  .accessories-image {
+    @apply w-full h-screen object-cover;
+  }
+  .accessories-detail {
+    @apply absolute top-[20%] left-1/2 translate-x-[-50%] translate-y-[-50%] text-center;
+  }
+  .footer-content {
+    @apply h-32 w-full bg-black absolute left-1/2 translate-x-[-50%] translate-y-[-50%] flex justify-center gap-10 text-white text-xl font-light;
+  }
+  .footer-menu {
+    @apply pt-4;
+  }
+}
